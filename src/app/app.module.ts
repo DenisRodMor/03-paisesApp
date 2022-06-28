@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { PaisModule } from './pais/pais.module';
 import { SHAREDModule } from './SHARED/shared.module';
 
+import { AppRoutingModule } from './app-routing.module';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -12,7 +14,8 @@ import { SHAREDModule } from './SHARED/shared.module';
   imports: [
     BrowserModule,
     SHAREDModule,
-    PaisModule
+    PaisModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
