@@ -5,20 +5,20 @@
 <div class="row">
   <div class="col">
     <form (ngSubmit)="buscar()" autocomplete="off">
-      <input type="text" name="termino" placeholder="Buscar país..." class="form-control" [(ngModel)]="termino"/>
+      <input type="text"  name="termino" placeholder="Buscar país..." class="form-control " [(ngModel)]="termino"/>
     </form>
   </div>
 </div>
 
 <hr>
 
-<div class="alert alert-danger">
-  No hay resultados que mostrar con el término ingresado.
+<div *ngIf="hayError"  class="alert alert-danger">
+  No hay resultados que mostrar con el término "{{termino}}".
 </div>
 
 <div class="row">
   <div class="col">
-    <table class="table table-hover">
+    <table *ngIf="!hayError" class="table table-hover">
       <thead>
           <tr>
             <th> # </th>
@@ -29,9 +29,10 @@
           </tr>
       </thead>
       <tbody>
+        <!-- https://flagcdn.com/co.svg -->
           <tr>
             <td>1</td>
-            <td>:)</td>
+            <td><img src="https://img.freepik.com/foto-gratis/ondeando-bandera-seda-costa-rica_97886-4082.jpg" width="100" height="50"></td>
             <td>Costa Rica</td>
             <td> 5.000.000</td>
             <td> <a href="/pais/cri"> Ver... </a></td>
@@ -40,3 +41,6 @@
     </table>
   </div>
 </div>
+
+<!-- Tu mensaje:  <textarea name="textarea" rows="5" cols="70" placeholder="Write something here"></textarea> -->
+<!-- ese textarea es para ingresar un cuadro grande y que se puede ir expandiendo -->
