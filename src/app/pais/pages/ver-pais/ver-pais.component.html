@@ -21,11 +21,33 @@
       <ul class="list-group">
         <li class="list-group-item">
           <strong>Población:</strong> {{pais.population | number}} <br>
-          <strong>Colindantes:</strong> {{pais.borders}}
-
+          <strong>Colindantes:</strong> {{pais.borders}}<br>
+          <strong>Código Númerico:</strong> {{pais.numericCode}}<br>
+          <strong>Código alpha3:</strong> {{pais.alpha3Code}}<br>
         </li>
       </ul>
     </div>
+
+    <h3>Traducciones</h3>
+    <div class="row">
+      <div class="col">
+        <span class="badge bg-primary mr-1">{{ pais.translations.es }}</span>
+        <span class="badge bg-primary mr-1">{{ pais.translations.de }}</span>
+        <span class="badge bg-primary mr-1">{{ pais.translations.fr }}</span>
+        <span class="badge bg-primary mr-1">{{ pais.translations.ja }}</span>
+        <span class="badge bg-primary mr-1">{{ pais.translations.it }}</span>
+        <span class="badge bg-primary mr-1">{{ pais.translations.br }}</span>
+        <span class="badge bg-primary mr-1">{{ pais.translations.pt }}</span>
+        <span class="badge bg-primary mr-1">{{ pais.translations.nl }}</span>
+        <span class="badge bg-primary mr-1">{{ pais.translations.hr }}</span>
+        <span class="badge bg-primary mr-1">{{ pais.translations.fa }}</span>
+      </div>
+    </div>
+
+    <!-- <pre class="mt-5">
+      {{pais | json}}
+    </pre> -->
+
   </div>
 </ng-template>
 
