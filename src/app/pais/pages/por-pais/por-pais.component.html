@@ -1,8 +1,8 @@
-<h2>Por País:</h2>
+<h2 class="animate__animated animate__rotateInDownRight ">Por País:</h2>
 <hr>
 
 
-<div class="row">
+<div class="row  animate__animated animate__jackInTheBox ">
   <div class="col">
    <app-pais-input (onEnter)="buscar($event)" (OnDebounce)="sugerencias($event)" placeholder="Buscar País..."></app-pais-input>
   </div>
@@ -10,11 +10,11 @@
 
 <hr>
 
-<div *ngIf="hayError"  class="alert alert-danger">
+<div *ngIf="hayError"  class="alert alert-danger animate__animated animate__rubberBand animate__slow">
   No hay resultados que mostrar con el término "{{termino}}".
 </div>
 
-<div  *ngIf="paises.length > 0" class="row">
+<div  *ngIf="paises.length > 0" class="row animate__animated animate__fadeInTopLeft animate__slow">
   <div class="col">
     <app-pais-tabla [paises]="paises"></app-pais-tabla>
   </div>

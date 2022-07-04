@@ -1,22 +1,22 @@
-<div *ngIf="!pais; else divPais" class="alert alert-info">
+<div *ngIf="!pais; else divPais" class="alert alert-info animate__animated animate__rotateInDownRight">
   Un momento por favor...
 </div>
 
 
 <ng-template #divPais>
-  <div class="row">
+  <div class="row animate__animated animate__lightSpeedInLeft">
     <div class="col-12">
       <h1>País: <small>{{pais.name}}</small></h1>
     </div>
   </div>
 
-  <div class="row">
+  <div class="row animate__animated animate__lightSpeedInLeft">
     <div class="col-4">
       <h3>Bandera: </h3>
       <img class="img-thumbnail" [src]="pais.flag"/>
     </div>
 
-    <div class="col">
+    <div class="col animate__animated animate__lightSpeedInLeft">
       <h3>Información:</h3>
       <ul class="list-group">
         <li class="list-group-item">
@@ -28,8 +28,8 @@
       </ul>
     </div>
 
-    <h3>Traducciones</h3>
-    <div class="row">
+    <h3 class="animate__animated animate__lightSpeedInLeft">Traducciones</h3>
+    <div class="row animate__animated animate__lightSpeedInLeft">
       <div class="col">
         <span class="badge bg-primary mr-1">{{ pais.translations.es }}</span>
         <span class="badge bg-primary mr-1">{{ pais.translations.de }}</span>
